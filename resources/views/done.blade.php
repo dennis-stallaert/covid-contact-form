@@ -56,6 +56,9 @@
         <form action="/contact" method="POST">
             <legend>Het congres van Bierbeek contactopvolging</legend>
             Bedankt, uw gegevens werden opgeslagen.
+            <div class="mt-2">
+                <a class="underline" href="/">Terug naar formulier</a>
+            </div>
         </form>
     </div>
 </div>
