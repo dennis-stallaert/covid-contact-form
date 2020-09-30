@@ -40,7 +40,7 @@ class ContactController extends Controller
             'address' => 'required',
             'email' => 'required|unique:contacts',
             'phone' => 'required',
-            'gdpr' => 'required|boolean',
+            'gdpr' => 'required',
         ]);
         $contact = Contact::create($request->all());
         return redirect('/done');
