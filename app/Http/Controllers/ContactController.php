@@ -35,14 +35,14 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
+        $validated = $request->validate([
             'name' => 'required',
             'address' => 'required',
             'email' => 'required|unique:contacts',
             'phone' => 'required',
             'gdpr' => 'required',
         ]);
-        $contact = Contact::create($request->all());
+        $contact = Contact::create($validated);
         return redirect('/done');
     }
 
