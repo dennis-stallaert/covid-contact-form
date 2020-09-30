@@ -14,5 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('form');
+});
+
+Route::post('/contact', 'App\Http\Controllers\ContactController@store');
+
+Route::get('/done',function(){
+    return view('done');
 });
